@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "milestones": [
+    {
+      "key": "m-2026-q1",
+      "title": "2026 Q1",
+      "description_file": "templates/milestone-q1.md",
+      "due_on": "2026-03-31",
+      "state": "open",
+      "metadata": {
+        "owner": "platform"
+      }
+    }
+  ],
+  "issues": [
+    {
+      "key": "auth-oidc",
+      "title": "Implement OIDC login",
+      "body_file": "templates/issue-oidc.md",
+      "labels": ["feature", "auth"],
+      "milestone": "m-2026-q1",
+      "state": "open",
+      "metadata": {
+        "effort": "M"
+      }
+    },
+    {
+      "key": "auth-audit",
+      "title": "Audit authentication events",
+      "body_file": "templates/issue-audit.md",
+      "labels": ["security"],
+      "milestone": "m-2026-q1",
+      "depends_on": ["auth-oidc"],
+      "state": "open"
+    }
+  ]
+}
